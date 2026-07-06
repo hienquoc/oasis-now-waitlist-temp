@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oasis Now | Urgent EV Charging Waitlist</title>
+    <meta
+      name="description"
+      content="Static EV charging waitlist landing page for Oasis Now buyer demand and provider lead capture."
+    >
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./config.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="#hero" aria-label="Oasis Now home">
+          <img
+            src="../../assets/brand/oasis-now-logo.svg"
+            alt="Oasis Now"
+            width="44"
+            height="44"
+          >
+          <div>
+            <strong>Oasis Now</strong>
+            <span>Urgent charging, starting local</span>
+          </div>
+        </a>
+        <nav class="topnav" aria-label="Primary">
+          <a href="#buyers">For drivers</a>
+          <a href="#providers">For providers</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#launch-checklist">Launch checklist</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Publish-ready waitlist</p>
+            <div class="status-row">
+              <span class="status-pill" data-config-text="pageModeLabel">Draft mode</span>
+              <span class="status-note" data-config-text="marketLabel">Your launch market</span>
+            </div>
+            <h1>Urgent EV charging help for drivers who cannot wait.</h1>
+            <p class="lede">
+              Oasis Now is testing a local concierge MVP for stranded, low-battery,
+              or time-sensitive EV charging requests. Drivers can raise a hand fast.
+              Providers can signal coverage and availability before the full app exists.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" data-config-link="buyerCtaUrl" href="#launch-checklist">
+                Request urgent charging
+              </a>
+              <a class="button secondary" data-config-link="providerCtaUrl" href="#launch-checklist">
+                Join as a provider
+              </a>
+            </div>
+            <p class="helper" data-config-text="ctaHelper">
+              Add buyer and provider links in `config.js` before hosting this page.
+            </p>
+            <ul class="signal-list" aria-label="Launch value">
+              <li>Fast local intake for urgent charging demand</li>
+              <li>Provider lead capture without waiting for the full mobile app</li>
+              <li>Simple concierge follow-up to prove demand before heavy buildout</li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel" aria-label="Launch readiness">
+            <p class="panel-label">Host it when ready</p>
+            <h2>One static page, two clear calls to action.</h2>
+            <p>
+              This page is meant for the first real hosted waitlist proof. It does
+              not depend on the repo-local intake API or the internal ops surfaces.
+            </p>
+            <div class="notice" data-config-status></div>
+            <dl class="mini-stats">
+              <div>
+                <dt>Buyer path</dt>
+                <dd data-config-text="buyerCtaLabel">External buyer waitlist or request form</dd>
+              </div>
+              <div>
+                <dt>Provider path</dt>
+                <dd data-config-text="providerCtaLabel">External provider interest form</dd>
+              </div>
+              <div>
+                <dt>Proof owner</dt>
+                <dd data-config-text="ownerLabel">Set owner and evidence after hosting</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="story-band" id="how-it-works">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Manual concierge loop</p>
+            <h2>Useful before the full marketplace exists</h2>
+            <p>
+              Keep the first experience narrow: capture demand, capture supply,
+              and learn whether people will respond, reply, and pay for urgent
+              EV charging fulfillment.
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="story-card">
+              <span class="step">1</span>
+              <h3>Driver submits a request</h3>
+              <p>Collect urgency, rough location, connector type, and contact details with minimal friction.</p>
+            </article>
+            <article class="story-card">
+              <span class="step">2</span>
+              <h3>Operator follows up manually</h3>
+              <p>Use the existing local intake and ops workflow to assess fit, contact providers, and quote next steps.</p>
+            </article>
+            <article class="story-card">
+              <span class="step">3</span>
+              <h3>Provider confirms availability</h3>
+              <p>Track response time, willingness to pay, and fulfillment friction before building deeper platform complexity.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="audience-shell">
+        <div class="container audience-grid">
+          <article class="audience-card" id="buyers">
+            <p class="eyebrow">For drivers</p>
+            <h2>When this is worth using</h2>
+            <ul class="check-list">
+              <li>You are low on battery and need help today.</li>
+              <li>You cannot reliably charge at home or at work.</li>
+              <li>You need a same-day option near an apartment, event, venue, or job site.</li>
+              <li>You want a human follow-up path instead of waiting for a polished app.</li>
+            </ul>
+            <a class="button primary wide-button" data-config-link="buyerCtaUrl" href="#launch-checklist">
+              Open buyer form
+            </a>
+          </article>
+
+          <article class="audience-card" id="providers">
+            <p class="eyebrow">For providers</p>
+            <h2>Who should raise a hand</h2>
+            <ul class="check-list">
+              <li>Mobile charging operators who can serve urgent local requests.</li>
+              <li>Charger owners exploring monetized availability.</li>
+              <li>Local partners who can test event, fleet, apartment, or venue demand.</li>
+              <li>Providers who want early lead flow before formal dispatch tools exist.</li>
+            </ul>
+            <a class="button secondary wide-button" data-config-link="providerCtaUrl" href="#launch-checklist">
+              Open provider form
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="proof-shell" id="launch-checklist">
+        <div class="container proof-grid">
+          <div class="proof-card">
+            <p class="eyebrow">Before hosting</p>
+            <h2>Minimum launch checklist</h2>
+            <ol class="ordered-list">
+              <li>Set the buyer and provider CTA URLs in `landing/ev-charging-waitlist/config.js`.</li>
+              <li>Preview the page locally and confirm the copy matches the current EV charging MVP.</li>
+              <li>Host this folder on a static site provider or simple web host.</li>
+              <li>Save a screenshot of the live page and update the live waitlist proof record.</li>
+            </ol>
+          </div>
+          <div class="proof-card">
+            <p class="eyebrow">Support</p>
+            <h2>What the page should make obvious</h2>
+            <ul class="check-list">
+              <li>Oasis Now is solving urgent EV charging first, not promising a giant marketplace today.</li>
+              <li>The driver path is fast, simple, and understandable under stress.</li>
+              <li>The provider path is concrete enough to capture real local supply interest.</li>
+              <li>The next operational step is manual follow-up, not silent form collection.</li>
+            </ul>
+            <p class="support-line">
+              Contact:
+              <a data-config-mailto data-config-text="supportEmailText" href="mailto:hello@example.com">hello@example.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>Oasis Now EV charging MVP waitlist</p>
+        <p class="footer-note">Host this page only after the CTA links are real and reachable.</p>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

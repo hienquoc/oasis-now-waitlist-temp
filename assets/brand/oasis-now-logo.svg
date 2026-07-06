@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Oasis Now logo</title>
+  <desc id="desc">Circular Oasis Now mark combining a location pin, water drop, and electric charging bolt.</desc>
+  <defs>
+    <linearGradient id="bg" x1="160" y1="128" x2="864" y2="896" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00A8A8"/>
+      <stop offset="0.52" stop-color="#1E6BFF"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="368" y1="244" x2="656" y2="736" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#DFFBFF"/>
+      <stop offset="1" stop-color="#7AE7FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="228" fill="#F8FAFC"/>
+  <circle cx="512" cy="512" r="392" fill="url(#bg)"/>
+  <path d="M512 174c-154 0-279 124-279 277 0 214 279 399 279 399s279-185 279-399c0-153-125-277-279-277z" fill="#FFFFFF" opacity="0.18"/>
+  <path d="M512 238c-112 126-176 219-176 316 0 98 79 178 176 178s176-80 176-178c0-97-64-190-176-316z" fill="url(#drop)"/>
+  <path d="M552 340 414 548h100l-48 156 154-218H516l36-146z" fill="#101828"/>
+  <path d="M552 340 414 548h100l-48 156 154-218H516l36-146z" fill="#FFD166" opacity="0.96"/>
+  <circle cx="512" cy="512" r="382" fill="none" stroke="#FFFFFF" stroke-width="20" opacity="0.92"/>
+</svg>
+

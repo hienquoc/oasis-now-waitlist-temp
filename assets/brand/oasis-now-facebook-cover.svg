@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="720" viewBox="0 0 1640 720" role="img" aria-labelledby="title desc">
+  <title id="title">Oasis Now Facebook cover</title>
+  <desc id="desc">Facebook cover image for Oasis Now with urgent EV charging marketplace copy.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1640" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ECFEFF"/>
+      <stop offset="0.45" stop-color="#E0F2FE"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="450" x2="1640" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="pin" x1="1160" y1="130" x2="1410" y2="490" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00A8A8"/>
+      <stop offset="0.6" stop-color="#1E6BFF"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1640" height="720" fill="url(#sky)"/>
+  <path d="M0 488c180-42 318-48 486-16 154 29 309 31 465-8 270-67 457-39 689 35v221H0V488z" fill="url(#road)"/>
+  <path d="M76 596c300-28 654-28 1032 0" fill="none" stroke="#F8FAFC" stroke-width="12" stroke-linecap="round" opacity="0.82" stroke-dasharray="64 38"/>
+  <g transform="translate(1184 116)">
+    <path d="M142 0C63 0 0 63 0 142c0 109 142 206 142 206s142-97 142-206C284 63 221 0 142 0z" fill="url(#pin)"/>
+    <circle cx="142" cy="138" r="86" fill="#F8FAFC"/>
+    <path d="M163 78 98 176h48l-22 74 74-104h-50l15-68z" fill="#FFD166"/>
+  </g>
+  <g transform="translate(108 116)">
+    <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="800" fill="#0F172A">Oasis Now</text>
+    <text x="0" y="86" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" fill="#0F766E">Urgent EV charging help, starting local.</text>
+    <text x="0" y="156" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500" fill="#334155">When getting charged now matters more than waiting for later.</text>
+    <rect x="0" y="214" width="358" height="64" rx="32" fill="#111827"/>
+    <text x="34" y="257" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">Join the early list</text>
+  </g>
+</svg>
+
