@@ -12,11 +12,11 @@
   --accent-soft: #f7dfbf;
   --warning: #7d4300;
   --warning-bg: #fff1dd;
-  --shadow: 0 24px 50px rgba(14, 35, 37, 0.08);
-  --radius-xl: 34px;
-  --radius-lg: 26px;
-  --radius-md: 18px;
-  --radius-sm: 12px;
+  --shadow: 0 18px 38px rgba(14, 35, 37, 0.1);
+  --radius-xl: 18px;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 8px;
 }
 
 *,
@@ -33,9 +33,9 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(12, 122, 111, 0.14), transparent 28%),
-    radial-gradient(circle at top right, rgba(229, 155, 70, 0.2), transparent 32%),
-    linear-gradient(180deg, #f8efe2 0%, #fcf7f0 34%, #eef5f3 100%);
+    linear-gradient(180deg, rgba(251, 246, 238, 0.9), rgba(238, 245, 243, 0.94)),
+    url("../../assets/waitlist/oasis-now-page-background.webp") center top / cover fixed,
+    #f7f1e8;
   font-family: "Aptos", "Segoe UI", "Helvetica Neue", sans-serif;
   font-size: 18px;
   line-height: 1.6;
@@ -43,6 +43,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -105,6 +106,11 @@ textarea {
   text-decoration: none;
 }
 
+.brand img {
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(14, 35, 37, 0.12);
+}
+
 .brand strong,
 h1,
 h2,
@@ -150,7 +156,7 @@ h3 {
 }
 
 .hero-grid {
-  grid-template-columns: 1.3fr 0.92fr;
+  grid-template-columns: 1fr 1fr;
   align-items: start;
 }
 
@@ -177,6 +183,30 @@ h3 {
 .audience-card,
 .proof-card {
   padding: 28px;
+}
+
+.visual-panel {
+  overflow: hidden;
+}
+
+.hero-image,
+.concept-visual img,
+.mobile-hero-visual img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-image {
+  aspect-ratio: 16 / 10;
+  height: auto;
+  margin: -28px -28px 24px;
+  width: calc(100% + 56px);
+  max-width: none;
+}
+
+.mobile-hero-visual {
+  display: none;
 }
 
 .eyebrow,
@@ -214,9 +244,9 @@ h3 {
 
 h1 {
   margin: 0;
-  max-width: 11ch;
-  font-size: clamp(2.6rem, 4.2vw, 4.8rem);
-  line-height: 0.96;
+  max-width: 13ch;
+  font-size: clamp(2.45rem, 4vw, 4.35rem);
+  line-height: 1;
 }
 
 h2 {
@@ -238,6 +268,19 @@ h3 {
 
 .section-heading p {
   margin: 0;
+}
+
+.concept-visual {
+  margin: 24px 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--panel-strong);
+}
+
+.concept-visual img {
+  aspect-ratio: 3 / 2;
 }
 
 .hero-actions {
@@ -300,6 +343,12 @@ h3 {
 .helper,
 .support-line {
   margin: 0;
+}
+
+.support-line a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
 }
 
 .signal-list,
@@ -433,12 +482,43 @@ h3 {
 @media (max-width: 720px) {
   body {
     font-size: 17px;
+    background-attachment: scroll;
   }
 
-  .topbar,
   .footer-row {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .topbar {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+  .topnav {
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .topnav a {
+    flex: 0 0 auto;
+    width: auto;
+    min-height: 44px;
+    font-size: 15px;
+    padding-right: 14px;
   }
 
   .hero,
@@ -449,7 +529,9 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.3rem, 9vw, 3.4rem);
+    max-width: 13ch;
+    font-size: clamp(1.72rem, 6.3vw, 2.25rem);
+    line-height: 1.08;
   }
 
   h2 {
@@ -458,12 +540,44 @@ h3 {
 
   .lede,
   .section-heading p {
-    font-size: 18px;
+    font-size: 17px;
   }
 
-  .button,
-  .topnav a {
+  .button {
     width: 100%;
+  }
+
+  .hero-actions {
+    margin: 20px 0 14px;
+  }
+
+  .hero-panel,
+  .story-card,
+  .audience-card,
+  .proof-card {
+    padding: 24px;
+  }
+
+  .hero-image {
+    margin: -24px -24px 20px;
+    width: calc(100% + 48px);
+  }
+
+  .hero-grid .visual-panel {
+    display: none;
+  }
+
+  .mobile-hero-visual {
+    display: block;
+    margin: 16px -12px 22px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 14px 30px rgba(14, 35, 37, 0.14);
+  }
+
+  .mobile-hero-visual img {
+    height: clamp(190px, 52vw, 260px);
+    object-position: 72% center;
   }
 }
 

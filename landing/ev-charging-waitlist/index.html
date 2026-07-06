@@ -17,7 +17,7 @@
       <div class="container topbar">
         <a class="brand" href="#hero" aria-label="Oasis Now home">
           <img
-            src="../../assets/brand/oasis-now-logo.svg"
+            src="../../assets/waitlist/oasis-now-trust-mark.webp"
             alt="Oasis Now"
             width="44"
             height="44"
@@ -40,17 +40,20 @@
       <section class="hero" id="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Publish-ready waitlist</p>
+            <p class="eyebrow">Chicago EV charging pilot</p>
             <div class="status-row">
               <span class="status-pill" data-config-text="pageModeLabel">Draft mode</span>
               <span class="status-note" data-config-text="marketLabel">Your launch market</span>
             </div>
-            <h1>Urgent EV charging help for drivers who cannot wait.</h1>
-            <p class="lede">
-              Oasis Now is testing a local concierge MVP for stranded, low-battery,
-              or time-sensitive EV charging requests. Drivers can raise a hand fast.
-              Providers can signal coverage and availability before the full app exists.
-            </p>
+            <figure class="mobile-hero-visual">
+              <img
+                src="../../assets/waitlist/urgent-ev-hero.webp"
+                alt="EV driver near a low-battery vehicle as mobile charging help approaches at dusk"
+                width="1600"
+                height="800"
+              >
+            </figure>
+            <h1>Low battery becomes high value when waiting means stranded.</h1>
             <div class="hero-actions">
               <a class="button primary" data-config-link="buyerCtaUrl" href="#launch-checklist">
                 Request urgent charging
@@ -59,22 +62,34 @@
                 Join as a provider
               </a>
             </div>
+            <p class="lede">
+              Oasis Now is testing fast local response for EV drivers who need help
+              now, not a cheaper option later. Tell us where demand is urgent, and
+              we will manually match early requests with reachable provider options.
+            </p>
             <p class="helper" data-config-text="ctaHelper">
               Add buyer and provider links in `config.js` before hosting this page.
             </p>
             <ul class="signal-list" aria-label="Launch value">
-              <li>Fast local intake for urgent charging demand</li>
-              <li>Provider lead capture without waiting for the full mobile app</li>
-              <li>Simple concierge follow-up to prove demand before heavy buildout</li>
+              <li>For drivers: urgent request capture before the battery problem becomes a tow problem</li>
+              <li>For providers: early lead flow where speed, distance, and trust matter</li>
+              <li>For the pilot: manual follow-up to prove real demand before heavy buildout</li>
             </ul>
           </div>
 
-          <aside class="hero-panel" aria-label="Launch readiness">
-            <p class="panel-label">Host it when ready</p>
-            <h2>One static page, two clear calls to action.</h2>
+          <aside class="hero-panel visual-panel" aria-label="Urgent EV charging help">
+            <img
+              class="hero-image"
+              src="../../assets/waitlist/urgent-ev-hero.webp"
+              alt="EV driver near a low-battery vehicle as mobile charging help approaches at dusk"
+              width="1600"
+              height="800"
+            >
+            <p class="panel-label">Why urgency changes value</p>
+            <h2>When range is low, proximity and response time become the product.</h2>
             <p>
-              This page is meant for the first real hosted waitlist proof. It does
-              not depend on the repo-local intake API or the internal ops surfaces.
+              Oasis Now is built around requests, offers, trust, location, and time
+              windows, starting with urgent EV charging.
             </p>
             <div class="notice" data-config-status></div>
             <dl class="mini-stats">
@@ -98,14 +113,23 @@
       <section class="story-band" id="how-it-works">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Manual concierge loop</p>
-            <h2>Useful before the full marketplace exists</h2>
+            <p class="eyebrow">The marketplace wedge</p>
+            <h2>A high-value need is urgent, local, and hard to postpone</h2>
             <p>
-              Keep the first experience narrow: capture demand, capture supply,
-              and learn whether people will respond, reply, and pay for urgent
-              EV charging fulfillment.
+              The first test is simple: capture the driver need, capture reachable
+              supply, and learn whether faster fulfillment creates enough value for
+              people to respond, pay, and come back.
             </p>
           </div>
+          <figure class="concept-visual">
+            <img
+              src="../../assets/waitlist/high-value-need-visual.webp"
+              alt="Map-style illustration showing a low-battery EV, a nearby helper, and a short urgent route"
+              width="1400"
+              height="933"
+              loading="lazy"
+            >
+          </figure>
           <div class="card-grid">
             <article class="story-card">
               <span class="step">1</span>
@@ -161,23 +185,23 @@
       <section class="proof-shell" id="launch-checklist">
         <div class="container proof-grid">
           <div class="proof-card">
-            <p class="eyebrow">Before hosting</p>
-            <h2>Minimum launch checklist</h2>
+            <p class="eyebrow">What happens next</p>
+            <h2>A human follows up while the pilot is still manual</h2>
             <ol class="ordered-list">
-              <li>Set the buyer and provider CTA URLs in `landing/ev-charging-waitlist/config.js`.</li>
-              <li>Preview the page locally and confirm the copy matches the current EV charging MVP.</li>
-              <li>Host this folder on a static site provider or simple web host.</li>
-              <li>Save a screenshot of the live page and update the live waitlist proof record.</li>
+              <li>Tell us whether you are a driver needing help or a provider with coverage.</li>
+              <li>Share the rough location, timing, and charging details needed for follow-up.</li>
+              <li>Oasis Now reviews the request manually and looks for reachable local options.</li>
+              <li>We use each real response to decide what the full mobile app should automate first.</li>
             </ol>
           </div>
           <div class="proof-card">
-            <p class="eyebrow">Support</p>
-            <h2>What the page should make obvious</h2>
+            <p class="eyebrow">Why this can be worth more</p>
+            <h2>Urgency changes the price of the same service</h2>
             <ul class="check-list">
-              <li>Oasis Now is solving urgent EV charging first, not promising a giant marketplace today.</li>
-              <li>The driver path is fast, simple, and understandable under stress.</li>
-              <li>The provider path is concrete enough to capture real local supply interest.</li>
-              <li>The next operational step is manual follow-up, not silent form collection.</li>
+              <li>A charger tomorrow is cheap. A reachable solution before you are stranded is valuable.</li>
+              <li>Distance, ETA, trust, and availability matter as much as the posted charging price.</li>
+              <li>Providers who can respond quickly should be discoverable when the need is time-sensitive.</li>
+              <li>The first Oasis Now category is EV charging, but the core marketplace is urgent local fulfillment.</li>
             </ul>
             <p class="support-line">
               Contact:
@@ -191,7 +215,7 @@
     <footer class="site-footer">
       <div class="container footer-row">
         <p>Oasis Now EV charging MVP waitlist</p>
-        <p class="footer-note">Host this page only after the CTA links are real and reachable.</p>
+        <p class="footer-note">Temporary pilot page while the permanent domain and intake forms are selected.</p>
       </div>
     </footer>
 
