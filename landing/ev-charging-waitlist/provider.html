@@ -9,6 +9,7 @@
       content="Temporary provider interest page for the Oasis Now urgent EV charging pilot."
     >
     <link rel="stylesheet" href="./styles.css">
+    <script src="./config.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -60,6 +61,79 @@
               This is a manual pilot intake path. Do not send banking, payment,
               or private credential details through email.
             </p>
+
+            <form class="intake-form" data-intake-form="provider">
+              <div class="form-grid">
+                <label>
+                  <span>Provider type</span>
+                  <select name="provider_type" required>
+                    <option value="mobile_charger">Mobile charger</option>
+                    <option value="fixed_location">Fixed location</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Business name <em>optional</em></span>
+                  <input name="business_name" autocomplete="organization">
+                </label>
+                <label>
+                  <span>Contact name</span>
+                  <input name="contact_name" autocomplete="name" required>
+                </label>
+                <label>
+                  <span>Phone</span>
+                  <input name="contact_phone" type="tel" autocomplete="tel" required>
+                </label>
+                <label>
+                  <span>Email <em>optional</em></span>
+                  <input name="contact_email" type="email" autocomplete="email">
+                </label>
+                <label>
+                  <span>Home base or service area</span>
+                  <input name="home_base_address" autocomplete="street-address" required>
+                </label>
+                <label>
+                  <span>Service radius miles</span>
+                  <input name="radius_miles" type="number" inputmode="decimal" min="0" step="0.5" required>
+                </label>
+                <label>
+                  <span>Availability</span>
+                  <select name="availability_status" required>
+                    <option value="available_now">Available now</option>
+                    <option value="same_day_only">Same day only</option>
+                    <option value="scheduled_only">Scheduled only</option>
+                    <option value="not_active">Not available yet</option>
+                  </select>
+                </label>
+                <fieldset class="full-span choice-group">
+                  <legend>Connector types</legend>
+                  <label><input name="connector_types" type="checkbox" value="ccs"> CCS</label>
+                  <label><input name="connector_types" type="checkbox" value="j1772"> J1772</label>
+                  <label><input name="connector_types" type="checkbox" value="nacs"> NACS / Tesla</label>
+                  <label><input name="connector_types" type="checkbox" value="cha_de_mo"> CHAdeMO</label>
+                </fieldset>
+                <label>
+                  <span>Insured</span>
+                  <select name="insured">
+                    <option value="yes">Yes</option>
+                    <option value="no">No or not sure</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Pricing notes <em>optional</em></span>
+                  <input name="pricing_model" placeholder="Dispatch fee, per-kWh estimate, minimum job, etc.">
+                </label>
+                <label class="full-span">
+                  <span>Availability notes <em>optional</em></span>
+                  <textarea name="availability_notes" rows="3"></textarea>
+                </label>
+                <label class="full-span">
+                  <span>Other notes <em>optional</em></span>
+                  <textarea name="notes" rows="4"></textarea>
+                </label>
+              </div>
+              <button class="button primary wide-button" type="submit" data-submit-label>Send provider details</button>
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            </form>
           </div>
 
           <aside class="hero-panel visual-panel" aria-label="Provider checklist">
@@ -83,5 +157,6 @@
         </div>
       </section>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>

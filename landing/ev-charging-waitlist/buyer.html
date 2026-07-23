@@ -9,6 +9,7 @@
       content="Temporary buyer intake page for urgent EV charging requests in the Oasis Now pilot."
     >
     <link rel="stylesheet" href="./styles.css">
+    <script src="./config.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -60,6 +61,86 @@
               Include only the location detail needed for follow-up. Do not send
               payment details through email.
             </p>
+
+            <form class="intake-form" data-intake-form="buyer">
+              <div class="form-grid">
+                <label>
+                  <span>Name</span>
+                  <input name="buyer_name" autocomplete="name" required>
+                </label>
+                <label>
+                  <span>Phone</span>
+                  <input name="buyer_phone" type="tel" autocomplete="tel" required>
+                </label>
+                <label>
+                  <span>Email <em>optional</em></span>
+                  <input name="buyer_email" type="email" autocomplete="email">
+                </label>
+                <label>
+                  <span>Service address or nearby landmark</span>
+                  <input name="location_address" autocomplete="street-address" required>
+                </label>
+                <label>
+                  <span>Safe waiting note <em>optional</em></span>
+                  <input name="safe_waiting_note" placeholder="Public garage entrance, hotel valet, etc.">
+                </label>
+                <label>
+                  <span>Urgency</span>
+                  <select name="urgency" required>
+                    <option value="asap">ASAP</option>
+                    <option value="today">Today</option>
+                    <option value="scheduled">Scheduled</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Earliest useful time</span>
+                  <input name="time_window_start_at" type="datetime-local" required>
+                </label>
+                <label>
+                  <span>Latest useful time <em>optional</em></span>
+                  <input name="time_window_end_at" type="datetime-local">
+                </label>
+                <label>
+                  <span>Vehicle make</span>
+                  <input name="vehicle_make" autocomplete="organization" required>
+                </label>
+                <label>
+                  <span>Vehicle model</span>
+                  <input name="vehicle_model" required>
+                </label>
+                <label>
+                  <span>Vehicle year <em>optional</em></span>
+                  <input name="vehicle_year" type="number" inputmode="numeric" min="1990" max="2100">
+                </label>
+                <label>
+                  <span>Connector type</span>
+                  <select name="connector_type" required>
+                    <option value="ccs">CCS</option>
+                    <option value="j1772">J1772</option>
+                    <option value="nacs">NACS / Tesla</option>
+                    <option value="cha_de_mo">CHAdeMO</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Battery level percent</span>
+                  <input name="battery_level_percent" type="number" inputmode="numeric" min="0" max="100" required>
+                </label>
+                <label>
+                  <span>Charge needed kWh</span>
+                  <input name="charge_needed_kwh" type="number" inputmode="decimal" min="0" step="0.1" required>
+                </label>
+                <label>
+                  <span>Max budget <em>optional</em></span>
+                  <input name="max_budget_usd" type="number" inputmode="decimal" min="0" step="1">
+                </label>
+                <label class="full-span">
+                  <span>Notes <em>optional</em></span>
+                  <textarea name="notes" rows="4"></textarea>
+                </label>
+              </div>
+              <button class="button primary wide-button" type="submit" data-submit-label>Send request</button>
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            </form>
           </div>
 
           <aside class="hero-panel visual-panel" aria-label="Request checklist">
@@ -83,5 +164,6 @@
         </div>
       </section>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>
